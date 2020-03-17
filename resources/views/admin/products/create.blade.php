@@ -29,6 +29,18 @@
                             <label for="description">Product description</label>
                             <input type="text" class="form-control" name="description">
                         </div>
+                        <div class="form-group">
+                            <label for="count">Count</label>
+                            <input type="text" class="form-control" name="count">
+                        </div>
+                        <div class="form-group">
+                            <label for="production_date">Production date</label>
+                            <input type="date" class="form-control" name="production_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="expiration_date">Expiration date</label>
+                            <input type="date" class="form-control" name="expiration_date">
+                        </div>
                         
                         
                         <div class="form-group">

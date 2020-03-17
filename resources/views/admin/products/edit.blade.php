@@ -28,7 +28,18 @@
                             <label for="description">Product description</label>
                             <input type="text" class="form-control" name="description" value="{{ $product->description }}">
                         </div>
-                        
+                        <div class="form-group">
+                            <label for="count">Count</label>
+                        <input type="text" class="form-control" name="count" value="{{ $product->count }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="production_date">Production date</label>
+                            <input type="date" class="form-control" name="production_date" value="{{ $product->production_date }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="expiration_date">Expiration date</label>
+                            <input type="date" class="form-control" name="expiration_date" value="{{ $product->expiration_date }}">
+                        </div>
                         <div class="form-group">
                             <button class="btn btn-success" type="submit">Update</button>
                         </div>

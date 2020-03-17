@@ -37,7 +37,7 @@ class ProductsController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:255',
-            'image' => 'required|image',
+            'image' => 'image',
             'price' => 'required',
             'description' => 'required'
         ]);
@@ -52,7 +52,10 @@ class ProductsController extends Controller
             'name' => $request -> name,
             'image' => '/uploads/products/'.$image_new_name,
             'price' => $request -> price,
-            'description' => $request -> description
+            'description' => $request -> description,
+            'count' => $request -> count,
+            'production_date' => $request -> production_date,
+            'expiration_date' => $request -> expiration_date
         ]);
 
         return redirect()->back();
@@ -107,6 +110,9 @@ class ProductsController extends Controller
         $product->name = $request->name;
         $product->price = $request->price;
         $product->description = $request->description;
+        $product->count = $request->count;
+        $product->production_date = $request->production_date;
+        $product->expiration_date = $request->expiration_date;
 
         $product->save();
 

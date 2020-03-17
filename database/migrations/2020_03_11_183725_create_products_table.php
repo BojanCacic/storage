@@ -19,6 +19,9 @@ class CreateProductsTable extends Migration
             $table->string('image');
             $table->bigInteger('price');
             $table->text('description');
+            $table->string('count');
+            $table->date('production_date');
+            $table->date('expiration_date');
             $table->timestamps();
         });
     }

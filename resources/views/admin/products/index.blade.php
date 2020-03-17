@@ -19,11 +19,21 @@
                         Description
                     </th>
                     <th>
+                        Count
+                    </th>
+                    <th>
+                        Production date
+                    </th>
+                    <th>
+                        Expiration date
+                    </th>
+                    <th>
                         Edit
                     </th>
                     <th>
                         Delete
                     </th>
+                    
                 </thead>
 
                 <tbody>
@@ -42,6 +52,15 @@
                             <td>
                                 {{$product->description}}
                             </td>
+                            <th>
+                                {{$product->count}}
+                            </th>
+                            <th>
+                                {{$product->production_date}}
+                            </th>
+                            <th>
+                                {{$product->expiration_date}}
+                            </th>
                             <td>
                                 <a href="{{ route('product.edit', ['id' => $product->id]) }}" class="btn btn-info">Edit</a>
                             </td>
