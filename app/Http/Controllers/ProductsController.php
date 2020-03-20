@@ -58,7 +58,7 @@ class ProductsController extends Controller
             'expiration_date' => $request -> expiration_date
         ]);
 
-        return redirect()->back();
+        return redirect()->route('products');
     }
 
     /**

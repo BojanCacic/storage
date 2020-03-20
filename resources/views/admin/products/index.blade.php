@@ -2,6 +2,14 @@
 
 @section('content')
 <div class="container">
+    <div calss="row">
+        <div class="col-md-6">
+            <a href="{{ route('product.create') }}" class="btn btn-primary">
+            <i class="fa fa-pencil" aria-hidden="true"></i> Create</a>
+        </div>
+    </div>
+</div>
+<div class="container">
     <div class="row">
         <div class="col-md-8">
             <table class="table table-hover">
@@ -62,10 +70,12 @@
                                 {{$product->expiration_date}}
                             </th>
                             <td>
-                                <a href="{{ route('product.edit', ['id' => $product->id]) }}" class="btn btn-info">Edit</a>
+                                <a href="{{ route('product.edit', ['id' => $product->id]) }}" class="btn btn-info">
+                                    <i class="fa fa-gear" aria-hidden="true"> Edit</i></a>
                             </td>
                             <td>
-                            <a href="{{ route('product.delete', ['id' => $product->id]) }}" class="btn btn-danger">Trash</a>
+                                <a href="{{ route('product.delete', ['id' => $product->id]) }}" class="btn btn-danger">
+                                    <i class="fa fa-trash" aria-hidden="true"> Trash</i></a>
                             </td>
                         </tr>
                             
