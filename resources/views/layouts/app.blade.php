@@ -23,6 +23,20 @@
     <!-- FontAwesome -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+
+    <link rel="stylesheet" type="text/css" href={{ asset("app/css/crumina-fonts.css") }}>
+    <link rel="stylesheet" type="text/css" href={{ asset("app/css/normalize.css") }}>
+    <link rel="stylesheet" type="text/css" href={{ asset("app/css/grid.css") }}>
+    <link rel="stylesheet" type="text/css" href={{ asset("app/css/styles.css") }}>
+
+
+    <!--Plugins styles-->
+
+    <link rel="stylesheet" type="text/css" href={{ asset("app/css/jquery.mCustomScrollbar.min.css") }}>
+    <link rel="stylesheet" type="text/css" href={{ asset("app/css/swiper.min.css") }}>
+    <link rel="stylesheet" type="text/css" href={{ asset("app/css/primary-menu.css") }}>
+    <link rel="stylesheet" type="text/css" href={{ asset("app/css/magnific-popup.css") }}>
+
 </head>
 <body>
     <div id="app">
@@ -42,7 +56,7 @@
                     </ul>
 
                     <ul class="navbar-nav mr-auto">
-                    <a class="nav-link" href="#">Opcija 2</a>
+                    <a class="nav-link" href="{{ route('cart') }}">Cart</a>
                     </ul>
                     
                     <ul class="navbar-nav mr-auto">
@@ -95,5 +109,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+
+    <script src={{  asset("app/js/jquery-2.1.4.min.js") }}></script>
+    <script src={{  asset("app/js/crum-mega-menu.js") }}></script>
+    <script src={{  asset("app/js/swiper.jquery.min.js") }}></script>
+    <script src={{  asset("app/js/theme-plugins.js") }}></script>
+    <script src={{  asset("app/js/main.js") }}></script>
+    <script src={{  asset("app/js/form-actions.js") }}></script>
+
+    <script src={{  asset("app/js/velocity.min.js") }}></script>
+    <script src={{  asset("app/js/ScrollMagic.min.js") }}></script>
+    <script src={{  asset("app/js/animation.velocity.min.js") }}></script>
 </body>
 </html>

@@ -51,5 +51,25 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'uses' => 'ProductsController@update',
         'as' => 'product.update'
     ]);
+    Route::get('/cart',[
+        'uses' => 'CartController@cart',
+        'as' => 'cart'
+    ]);
+    Route::post('/cart/add',[
+        'uses' => 'CartController@add_to_cart',
+        'as' => 'cart.add'
+    ]);
+    Route::get('/cart/delete/{rowId}',[
+        'uses' => 'CartController@cart_delete',
+        'as' => 'cart.delete'
+    ]);
+    Route::get('/cart/decr/{rowId}/{qty}',[
+        'uses' => 'CartController@decr',
+        'as' => 'cart.decr'
+    ]);
+    Route::get('/cart/incr/{rowId}/{qty}',[
+        'uses' => 'CartController@incr',
+        'as' => 'cart.incr'
+    ]);
 
 });
