@@ -6,17 +6,17 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-12">
+                <div class="col-md-8">
 
                     <div class="cart">
 
-                        <h1 class="cart-title">In Your Shopping Cart: <span class="c-primary">{{ Cart::content()->count()}} items</span></h1>
+                        <h3 class="cart-title">In Your Shopping Cart: <span class="c-primary">{{ Cart::content()->count()}} items</span></h3>
 
                     </div>
 
                     <form action="#" method="post" class="cart-main">
 
-                        <table class="shop_table cart">
+                        <table class="table table-hover">
                             <thead class="cart-product-wrap-title-main">
                             <tr>
                                 <th class="product-remove">&nbsp;</th>
@@ -101,7 +101,7 @@
                     <div class="cart-total">
                         <h3 class="cart-total-title">Cart Totals</h3>
                         <h5 class="cart-total-total">Total: <span class="price">$100.97</span></h5>
-                        <a href="#" class="btn btn-medium btn--light-green btn-hover-shadow">
+                        <a href="#" class="btn btn-success">
                             <span class="text">Checkout</span>
                             <span class="semicircle"></span>
                         </a>

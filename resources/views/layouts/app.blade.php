@@ -24,11 +24,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-    <link rel="stylesheet" type="text/css" href={{ asset("app/css/crumina-fonts.css") }}>
-    <link rel="stylesheet" type="text/css" href={{ asset("app/css/normalize.css") }}>
-    <link rel="stylesheet" type="text/css" href={{ asset("app/css/grid.css") }}>
-    <link rel="stylesheet" type="text/css" href={{ asset("app/css/styles.css") }}>
-
+    
 
     <!--Plugins styles-->
 
@@ -51,17 +47,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                    <a class="nav-link" href="{{ route('products') }}">{{__('Products')}}</a>
+                    <ul class="navbar-nav mr-5">
+                    <a class="nav-link" href="{{ route('products') }}">Storage</a>
                     </ul>
 
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mr-5">
+                    <a class="nav-link" href="{{ route('product.create') }}">Add product</a>
+                    </ul>
+                
+                    <ul class="navbar-nav mr-5">
                     <a class="nav-link" href="{{ route('cart') }}">Cart</a>
                     </ul>
                     
-                    <ul class="navbar-nav mr-auto">
-                    <a class="nav-link" href="#">Opcija 3</a>
-                    </ul>
+                    
 
 
                     <!-- Right Side Of Navbar -->

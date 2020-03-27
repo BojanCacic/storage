@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container">
-    <div calss="row">
+    <!--<div calss="row">
         <div class="col-md-6">
             <a href="{{ route('product.create') }}" class="btn btn-primary">
             <i class="fa fa-pencil" aria-hidden="true"></i> Create</a>
         </div>
     </div>
-</div>
+</div> -->
 <div class="container">
     <div class="row">
         <div class="col-md-8">
