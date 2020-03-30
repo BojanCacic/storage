@@ -55,7 +55,7 @@ class ClientsController extends Controller
     }
     public function destroy($id)
     {
-        $client = Product::find($id);
+        $client = Client::find($id);
 
         $client->delete();
 

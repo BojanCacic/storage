@@ -42,7 +42,7 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'as' => 'product.store'
     ]);
 
-    Route::post('/product/delete', [
+    Route::get('/product/delete/{id}', [
         'uses' => 'ProductsController@destroy',
         'as' => 'product.delete'
     ]);
@@ -92,7 +92,7 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'as' => 'client.store'
     ]);
 
-    Route::post('/client/delete', [
+    Route::get('/client/delete/{id}', [
         'uses' => 'ClientsController@destroy',
         'as' => 'client.delete'
     ]);
