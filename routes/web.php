@@ -72,4 +72,33 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'as' => 'cart.incr'
     ]);
 
+    Route::get('/clients', [
+        'uses' => 'ClientsController@index',
+        'as' => 'clients'
+    ]);
+
+    Route::get('/clients/create', [ 
+        'uses' => 'ClientsController@create',
+        'as' => 'client.create'
+    ]);
+
+    Route::get('/client/edit/{id}', [
+        'uses' => 'ClientsController@edit',
+        'as' => 'client.edit'
+    ]);
+
+    Route::post('/clients/store', [
+        'uses' => 'ClientsController@store',
+        'as' => 'client.store'
+    ]);
+
+    Route::post('/client/delete', [
+        'uses' => 'ClientsController@destroy',
+        'as' => 'client.delete'
+    ]);
+
+    Route::post('/client/update/{id}', [
+        'uses' => 'ClientsController@update',
+        'as' => 'client.update'
+    ]);
 });

@@ -54,7 +54,15 @@
                     <ul class="navbar-nav mr-5">
                     <a class="nav-link" href="{{ route('product.create') }}">Add product</a>
                     </ul>
-                
+                    
+                    <ul class="navbar-nav mr-5">
+                    <a class="nav-link" href="{{ route('client.create') }}">Add client</a>
+                    </ul>
+                    
+                    <ul class="navbar-nav mr-5">
+                    <a class="nav-link" href="{{ route('clients') }}">Clients</a>
+                    </ul>
+
                     <ul class="navbar-nav mr-5">
                     <a class="nav-link" href="{{ route('cart') }}">Cart</a>
                     </ul>
