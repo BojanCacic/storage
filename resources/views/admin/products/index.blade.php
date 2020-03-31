@@ -15,25 +15,25 @@
             <table class="table table-hover">
                 <thead>
                     <th>
-                        Name     
+                        @sortablelink('name')     
                     </th>
                     <th>
                         Image
                     </th>
                     <th>
-                        Price
+                        @sortablelink('price')
                     </th>
                     <th>
                         Description
                     </th>
                     <th>
-                        Count
+                        @sortablelink('count')
                     </th>
                     <th>
-                        Production date
+                        @sortablelink('production_date')
                     </th>
                     <th>
-                        Expiration date
+                        @sortablelink('expiration_date')
                     </th>
                     <th>
                         Edit
