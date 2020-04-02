@@ -71,6 +71,10 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'uses' => 'CartController@incr',
         'as' => 'cart.incr'
     ]);
+    Route::get('/cart/save', [
+        'uses' => 'CartController@save',
+        'as' => 'cart.save'
+    ]);
 
     Route::get('/clients', [
         'uses' => 'ClientsController@index',
@@ -101,4 +105,5 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'uses' => 'ClientsController@update',
         'as' => 'client.update'
     ]);
+    
 });
