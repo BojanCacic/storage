@@ -69,40 +69,23 @@
                                 </td>
 
                             </tr>
-                            @endforeach
-
-                            
-
-                            <tr>
-                                <td colspan="5" class="actions">
-
-                                    <div class="coupon">
-                                        <input name="coupon_code" class="email input-standard-grey" value="" placeholder="Coupon code" type="text">
-                                        <div class="btn btn-medium btn--breez btn-hover-shadow">
-                                            <span class="text">Apply Coupon</span>
-                                            <span class="semicircle--right"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn btn-medium btn--dark btn-hover-shadow">
-                                        <span class="text">Apply Coupon</span>
-                                        <span class="semicircle"></span>
-                                    </div>
-
-                                </td>
-                            </tr>
-
+                                @endforeach
                             </tbody>
-                        </table>
+                        
+                            
 
 
                     </form>
 
                     <div class="cart-total">
                         <h3 class="cart-total-title">Cart Totals</h3>
-                        <h5 class="cart-total-total">Total: <span class="price">$100.97</span></h5>
-                        <a href="#" class="btn btn-success">
+                        <h5 class="cart-total-total">Total: <span class="price">{{ Cart::total() }}</span></h5>
+                        <a href=" {{ route('cart.save') }}" class="btn btn-success">
                             <span class="text">Checkout</span>
+                            <span class="semicircle"></span>
+                        </a>
+                        <a href="#" class="btn btn-info">
+                            <span class="text">Save</span>
                             <span class="semicircle"></span>
                         </a>
                     </div>

@@ -17,7 +17,7 @@ class CartController extends Controller
 
         $pdt = Product::find(request()->pdt_id);
 
-        $cartItem = Cart::add([
+        $cartItem = Cart::instance('wishlist')->add([
             'id' => $pdt->id,
             'name' => $pdt->name,
             'qty' => request()->qty,
@@ -49,5 +49,11 @@ class CartController extends Controller
 
         return redirect()->back();
 
+    }
+
+    public function save(){
+        Cart::instance('wishlist')->store('Admin');
+
+        return redirect()->back();
     }
 }
