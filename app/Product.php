@@ -1,13 +1,13 @@
 <?php
 
 namespace App;
-
+use Sortable;
 use Illuminate\Database\Eloquent\Model;
 
 
 class Product extends Model{
 
-    use Sortable;
+    
 
     protected $fillable = [
         'name', 'image', 'price', 'description','count','production_date','expiration_date'
