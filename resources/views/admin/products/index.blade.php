@@ -105,6 +105,7 @@
                         </tr>
                             
                         @endforeach
+                        {!! $products->appends(\Request::except('page'))->render() !!}
                     @else 
                         <tr>
                             <th colspan="5">No products.</th>
