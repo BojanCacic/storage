@@ -15,24 +15,23 @@
             <table class="table table-hover">
                 <thead>
                     <th>
-                        Name     
+                        @sortablelink('name')    
                     </th>
                     <th>
-                        City
+                        @sortablelink('city')
                     </th>
                     <th>
-                        Address
+                        @sortablelink('address')
                     </th>
                     <th>
-                        Email
+                        @sortablelink('email')
                     </th>
                     <th>
-                        Phone
+                        @sortablelink('phone')
                     </th>
                     <th>
                         Description
                     </th>
-                    
                     <th>
                         Edit
                     </th>
@@ -84,6 +83,7 @@
                         </tr>
                             
                         @endforeach
+                        {!! $clients->appends(\Request::except('page'))->render() !!}
                     @else 
                         <tr>
                             <th colspan="5">No clients.</th>

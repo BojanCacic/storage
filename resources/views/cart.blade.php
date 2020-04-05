@@ -74,6 +74,7 @@
                                 </td>
 
                             </tr>
+<<<<<<< HEAD
                             @endforeach
 
                             <div class="form-group">
@@ -101,18 +102,34 @@
                                 </td>
                             </tr>
 
+=======
+                                @endforeach
+>>>>>>> adeb333cd72ffa00aef9c6857cf1366766c644f2
                             </tbody>
-                        </table>
+                        
+                            
 
 
                     
 
                     <div class="cart-total">
                         <h3 class="cart-total-title">Cart Totals</h3>
+<<<<<<< HEAD
                         <h5 class="cart-total-total">Total: <span class="price">$100.97</span></h5>
                         <div class="form-group">
                             <button class="btn btn-success" type="submit">Save</button>
                         </div>
+=======
+                        <h5 class="cart-total-total">Total: <span class="price">{{ Cart::total() }}</span></h5>
+                        <a href=" {{ route('cart.save') }}" class="btn btn-success">
+                            <span class="text">Checkout</span>
+                            <span class="semicircle"></span>
+                        </a>
+                        <a href="#" class="btn btn-info">
+                            <span class="text">Save</span>
+                            <span class="semicircle"></span>
+                        </a>
+>>>>>>> adeb333cd72ffa00aef9c6857cf1366766c644f2
                     </div>
                 </form>
                 </div>            

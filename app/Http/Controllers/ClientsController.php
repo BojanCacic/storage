@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 
 class ClientsController extends Controller
 {
-    public function index()
+    public function index(Client $client)
     {
-        return view('admin.clients.index')->with('clients', Client::all());
+        $clients = $client->sortable()->paginate(20);
+        return view('admin.clients.index')->with('clients', $clients);
+        //return view('admin.clients.index')->with('clients', Client::all());
     }
+
 
     public function create()
     {

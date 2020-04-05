@@ -71,6 +71,7 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'uses' => 'CartController@incr',
         'as' => 'cart.incr'
     ]);
+<<<<<<< HEAD
     Route::post('/cart/save', [
         'uses' => 'CartController@save',
         'as' => 'cart.save'
@@ -80,6 +81,12 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'uses' => 'CartController@destroy',
         'as' => 'cart.destroy'
     ]);
+=======
+    Route::get('/cart/save', [
+        'uses' => 'CartController@save',
+        'as' => 'cart.save'
+    ]);
+>>>>>>> adeb333cd72ffa00aef9c6857cf1366766c644f2
 
     Route::get('/clients', [
         'uses' => 'ClientsController@index',
@@ -110,4 +117,5 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'uses' => 'ClientsController@update',
         'as' => 'client.update'
     ]);
+    
 });
