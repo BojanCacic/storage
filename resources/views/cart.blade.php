@@ -14,8 +14,13 @@
 
                     </div>
 
-                    <form action="#" method="post" class="cart-main">
+                    <div class="btn btn-medium btn--dark btn-hover-shadow">
+                        <a href="{{ route('cart.destroy') }}">Delete cart</a>
+                    
+                    </div>
 
+                    <form action="{{ route('cart.save') }}" method="post" class="cart-main">
+                        {{csrf_field()}}
                         <table class="table table-hover">
                             <thead class="cart-product-wrap-title-main">
                             <tr>
@@ -71,6 +76,10 @@
                             </tr>
                             @endforeach
 
+                            <div class="form-group">
+                                <label for="client">Client</label>
+                                <input type="text" class="form-control" name="client">
+                            </div>
                             
 
                             <tr>
@@ -96,19 +105,17 @@
                         </table>
 
 
-                    </form>
+                    
 
                     <div class="cart-total">
                         <h3 class="cart-total-title">Cart Totals</h3>
                         <h5 class="cart-total-total">Total: <span class="price">$100.97</span></h5>
-                        <a href="#" class="btn btn-success">
-                            <span class="text">Checkout</span>
-                            <span class="semicircle"></span>
-                        </a>
+                        <div class="form-group">
+                            <button class="btn btn-success" type="submit">Save</button>
+                        </div>
                     </div>
-
-                </div>
-
+                </form>
+                </div>            
             </div>
         </div>
     </div>

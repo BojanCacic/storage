@@ -50,4 +50,15 @@ class CartController extends Controller
         return redirect()->back();
 
     }
+    public function save(Request $request){
+        Cart::instance('wishlist')->store('Admin', $request->client);
+
+        return redirect()->back();
+    }
+    public function destroy(){
+        
+        Cart::destroy();
+        
+        return redirect()->back();
+    }
 }

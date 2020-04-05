@@ -71,6 +71,15 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'uses' => 'CartController@incr',
         'as' => 'cart.incr'
     ]);
+    Route::post('/cart/save', [
+        'uses' => 'CartController@save',
+        'as' => 'cart.save'
+    ]);
+
+    Route::get('/cart/destroy', [
+        'uses' => 'CartController@destroy',
+        'as' => 'cart.destroy'
+    ]);
 
     Route::get('/clients', [
         'uses' => 'ClientsController@index',
