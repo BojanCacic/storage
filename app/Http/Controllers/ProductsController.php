@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Spatie\Searchable\Search;
 
 class ProductsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @param Product $product
      * @return \Illuminate\Http\Response
      */
     public function index(Product $product)
@@ -62,6 +64,21 @@ class ProductsController extends Controller
         ]);
 
         return redirect()->route('products');
+    }
+
+    /**
+     * Display search results
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request)
+    {
+        $searchResult = (new Search())
+            ->registerModel(Product::class, 'name')
+            ->perform($request->input('query'));
+
+        return view('admin.product.search', compact('searhcResults'));
     }
 
     /**

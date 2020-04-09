@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="card">
+    <form action="{{ route('product.search') }}" method="POST" class="form-inline">
+        @csrf
+        <div class="form-group">
+            <input type="text" name="query" class="form-control" placeholder="Search" />
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
 <div class="container">
     <!--<div calss="row">
         <div class="col-md-6">
