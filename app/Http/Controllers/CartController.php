@@ -50,7 +50,6 @@ class CartController extends Controller
         return redirect()->back();
 
     }
-<<<<<<< HEAD
     public function save(Request $request){
         Cart::instance('wishlist')->store('Admin', $request->client);
 
@@ -60,12 +59,6 @@ class CartController extends Controller
         
         Cart::destroy();
         
-=======
-
-    public function save(){
-        Cart::instance('wishlist')->store('Admin');
-
->>>>>>> adeb333cd72ffa00aef9c6857cf1366766c644f2
         return redirect()->back();
     }
 }
