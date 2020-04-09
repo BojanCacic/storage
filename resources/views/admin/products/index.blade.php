@@ -58,7 +58,7 @@
                                 {{$product->name}}
                             </td>
                             <td>
-                            <img src="{{ asset($product->image) }}" alt="{{$product->title}}" style="width: 100px"></a> 
+                            <img src="{{ asset($product->image) }}" alt="{{$product->title}}" style="width: 100px"></a>   
                             </td>
                             <td>
                                 {{$product->price}}
