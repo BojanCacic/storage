@@ -46,7 +46,7 @@
 
                                     <div class="cart-product__item">
                                         <a href="#">
-                                            <img src="{{ asset($pdt->model->image) }}" alt="product" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image">
+                                            <img src="{{ asset($pdt->model->image) }}" alt="product" class="attachment-shop_thumbnail wp-post-image" height=120px; width=auto;>
                                         </a>
                                         <div class="cart-product-content">
                                             
@@ -76,30 +76,35 @@
                             </tr>
                             @endforeach
 
+                            
                             <div class="form-group">
                                 <label for="client">Client</label>
                                 <input type="text" class="form-control" name="client">
                             </div>
+                            <div class="form-group">
+                                <label for="client_name">Select a client</label>
+                                <select name="client_name" id="client_name" class="form-control">
+                                    @foreach($clients as $client)
+                                    <option value="{{ $client->id }}">{{ $client->name }}</option>                            
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Phone</label>
+                                <input type="text" class="form-control" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Address</label>
+                                <input type="text" class="form-control" name="address">
+                            </div>
                             
+                            <div class="form-group">
+                                <label for="invoice">Invoice number</label>
+                                <input type="text" class="form-control" name="invoice">
+                            </div>
 
-                            <tr>
-                                <td colspan="5" class="actions">
-
-                                    <div class="coupon">
-                                        <input name="coupon_code" class="email input-standard-grey" value="" placeholder="Coupon code" type="text">
-                                        <div class="btn btn-medium btn--breez btn-hover-shadow">
-                                            <span class="text">Apply Coupon</span>
-                                            <span class="semicircle--right"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn btn-medium btn--dark btn-hover-shadow">
-                                        <span class="text">Apply Coupon</span>
-                                        <span class="semicircle"></span>
-                                    </div>
-
-                                </td>
-                            </tr>
+                            
 
                             </tbody>
                         </table>
@@ -109,7 +114,7 @@
 
                     <div class="cart-total">
                         <h3 class="cart-total-title">Cart Totals</h3>
-                        <h5 class="cart-total-total">Total: <span class="price">$100.97</span></h5>
+                        <h5 class="cart-total-total">Total: <span class="price">{{Cart::total()}}</span></h5>
                         <div class="form-group">
                             <button class="btn btn-success" type="submit">Save</button>
                         </div>

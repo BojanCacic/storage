@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Client;
 use Cart;
 use App\Product;
 use Illuminate\Http\Request;
@@ -9,7 +10,9 @@ use Illuminate\Http\Request;
 class CartController extends Controller
 {
     public function cart(){
-        return view('cart');
+
+        $clients = Client::all();
+        return view('cart')->with('clients', $clients);
     }
 
     public function add_to_cart(){
@@ -51,7 +54,9 @@ class CartController extends Controller
 
     }
     public function save(Request $request){
-        Cart::instance('wishlist')->store('Admin', $request->client);
+
+        $invoice = $request->invoice;
+        Cart::instance($invoice)->store($invoice, $request->client);
 
         return redirect()->back();
     }

@@ -9,4 +9,8 @@ class Client extends Model
     protected $fillable = [
         'name', 'address', 'city', 'email','phone','description',
     ];
+
+    public function cart(){
+        return $this->hasManny('App\vendor\bumbummen99\shoppingcart\src\Cart.php');
+    }
 }

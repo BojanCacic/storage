@@ -13,6 +13,8 @@
 
                     <form action="{{route('client.store')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
+
+                        
                         <div class="form-group">
                             <label for="name">Client name</label>
                             <input type="text" class="form-control" name="name">
@@ -30,7 +32,7 @@
                             <input type="text" class="form-control" name="email">
                         </div>
                         <div class="form-group">
-                            <label for="name">phone</label>
+                            <label for="name">Phone</label>
                             <input type="text" class="form-control" name="phone">
                         </div>
                         <div class="form-group">
