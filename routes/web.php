@@ -110,4 +110,5 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'uses' => 'ClientsController@update',
         'as' => 'client.update'
     ]);
+    
 });

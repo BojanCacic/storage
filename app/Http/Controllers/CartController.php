@@ -20,7 +20,7 @@ class CartController extends Controller
 
         $pdt = Product::find(request()->pdt_id);
 
-        $cartItem = Cart::add([
+        $cartItem = Cart::instance('wishlist')->add([
             'id' => $pdt->id,
             'name' => $pdt->name,
             'qty' => request()->qty,
