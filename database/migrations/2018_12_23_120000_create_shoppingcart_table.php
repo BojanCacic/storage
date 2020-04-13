@@ -17,7 +17,8 @@ class CreateShoppingcartTable extends Migration
             $table->longText('content');
             $table->nullableTimestamps();
             $table->string('client');
-
+            $table->string('invoice');
+            $table->string('pro_forma');
             $table->primary(['identifier', 'instance']);
         });
     }

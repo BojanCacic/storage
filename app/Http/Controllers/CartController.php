@@ -17,10 +17,11 @@ class CartController extends Controller
 
     public function add_to_cart(){
         //dd(request()->all());
+        
 
         $pdt = Product::find(request()->pdt_id);
 
-        $cartItem = Cart::instance('wishlist')->add([
+        $cartItem = Cart::instance()->add([
             'id' => $pdt->id,
             'name' => $pdt->name,
             'qty' => request()->qty,
@@ -55,8 +56,11 @@ class CartController extends Controller
     }
     public function save(Request $request){
 
+
+        $identifier = rand().time();
         $invoice = $request->invoice;
-        Cart::instance($invoice)->store($invoice, $request->client);
+        Cart::instance($invoice)->store($identifier, $request->client,
+        $request->invoice, $request->pro_forma);
 
         return redirect()->back();
     }

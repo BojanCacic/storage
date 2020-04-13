@@ -21,6 +21,26 @@
 
                     <form action="{{ route('cart.save') }}" method="post" class="cart-main">
                         {{csrf_field()}}
+                        <div class="form-group">
+                            <label for="client">Select a client</label>
+                            <select name="client" id="client" class="form-control">
+                                @foreach($clients as $client)
+                                <option value="{{ $client->id }}">{{ $client->name }}</option>                            
+                                @endforeach
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="invoice">Invoice number</label>
+                            <input type="text" class="form-control" name="invoice">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pro_forma">Pro forma number</label>
+                            <input type="text" class="form-control" name="pro_forma">
+                        </div>
+
+                        
                         <table class="table table-hover">
                             <thead class="cart-product-wrap-title-main">
                             <tr>
@@ -77,36 +97,11 @@
                             @endforeach
 
                             
-                            <div class="form-group">
-                                <label for="client">Client</label>
-                                <input type="text" class="form-control" name="client">
-                            </div>
-                            <div class="form-group">
-                                <label for="client_name">Select a client</label>
-                                <select name="client_name" id="client_name" class="form-control">
-                                    @foreach($clients as $client)
-                                    <option value="{{ $client->id }}">{{ $client->name }}</option>                            
-                                    @endforeach
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="name">Phone</label>
-                                <input type="text" class="form-control" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Address</label>
-                                <input type="text" class="form-control" name="address">
-                            </div>
                             
-                            <div class="form-group">
-                                <label for="invoice">Invoice number</label>
-                                <input type="text" class="form-control" name="invoice">
-                            </div>
-
+                            
                             
 
-                            </tbody>
+                        </tbody>
                         
                             
 
