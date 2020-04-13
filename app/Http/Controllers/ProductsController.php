@@ -74,11 +74,11 @@ class ProductsController extends Controller
      */
     public function search(Request $request)
     {
-        $searchResult = (new Search())
+        $searchResults = (new Search())
             ->registerModel(Product::class, 'name')
             ->perform($request->input('query'));
 
-        return view('admin.product.search', compact('searhcResults'));
+        return view('admin.products.search', compact('searchResults'));
     }
 
     /**

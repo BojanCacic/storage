@@ -19,9 +19,9 @@ class Product extends Model implements Searchable{
         'name', 'price', 'count','production_date','expiration_date'
     ];
 
-    public function getSearchResult(): SearchResult
+    public function getSearchResult() : SearchResult
     {
-        $url = route('admin.product.search', $this->id);
+        $url = route('product.search', $this->id);
 
         return new \Spatie\Searchable\SearchResult(
             $this,
