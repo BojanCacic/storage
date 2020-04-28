@@ -104,8 +104,11 @@ return [
     |
     */
 
-    'migrations' => 'migrations',
-
+    
+    
+        'migrations' => 'migrations',
+        
+    
     /*
     |--------------------------------------------------------------------------
     | Redis Databases

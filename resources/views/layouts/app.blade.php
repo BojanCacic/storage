@@ -52,6 +52,10 @@
                     </ul>
 
                     <ul class="navbar-nav mr-5">
+                        <a class="nav-link" href="{{ route('cart.invoices') }}">Invoices</a>
+                        </ul>
+
+                    <ul class="navbar-nav mr-5">
                     <a class="nav-link" href="{{ route('product.create') }}">Add product</a>
                     </ul>
                     

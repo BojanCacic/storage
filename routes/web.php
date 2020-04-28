@@ -81,6 +81,16 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'] ,function(){
         'as' => 'cart.destroy'
     ]);
 
+    Route::get('/cart/invoices', [
+        'uses' => 'CartController@show_invoices',
+        'as' => 'cart.invoices'
+    ]);
+
+    Route::get('/invoice/edit/{invoice}', [
+        'uses' => 'CartController@invoice_edit',
+        'as' => 'invoice.edit'
+    ]);
+
     Route::get('/clients', [
         'uses' => 'ClientsController@index',
         'as' => 'clients'

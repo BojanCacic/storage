@@ -53,7 +53,13 @@
                             </thead>
                             <tbody>
 
+                            
+
                             @foreach(Cart::content() as $pdt)
+
+
+                            
+                            
                             <tr class="cart_item">
 
                                 <td class="product-remove">
