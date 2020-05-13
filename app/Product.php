@@ -17,7 +17,7 @@ class Product extends Model{
         'name', 'price', 'count','production_date','expiration_date'
     ];
 
-    public function cart(){
-        return $this->belongsToManny('App\vendor\bumbummen99\shoppingcart\src\Cart.php');
+    public function carts(){
+        return $this->belongsToMany(Cart::class);
     }
 }

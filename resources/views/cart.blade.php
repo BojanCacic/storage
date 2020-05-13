@@ -58,7 +58,8 @@
                             @foreach(Cart::content() as $pdt)
 
 
-                            
+                            <input type="hidden" name="item_id[]" value="{{ $pdt->id }}">
+
                             
                             <tr class="cart_item">
 

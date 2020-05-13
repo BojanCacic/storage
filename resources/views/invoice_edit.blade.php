@@ -53,13 +53,13 @@
             <table class="table table-hover">
                 <thead>
                     <th>
-                        1     
+                        Name     
                     </th>
                     <th>
-                        Invoice
+                        Quantity
                     </th>
                     <th>
-                        2     
+                        Price     
                     </th>
                     
                     
@@ -73,13 +73,13 @@
                         
                         <tr>
                             <td>
-                                {{ $item }}
+                                {{ $item->name }}
                             </td>
                             <td>
-                                
+                                {{ $item->qty }}
                             </td>   
                             <td>
-                            
+                                {{ $item->price }}
                             </td>
                                                       
                         </tr>

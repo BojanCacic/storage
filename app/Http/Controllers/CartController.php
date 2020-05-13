@@ -30,6 +30,9 @@ class CartController extends Controller
             'price' => $pdt->price,
             'weight' => 0 
         ]);
+
+        
+        
         
         Cart::associate($cartItem->rowId, 'App\Product');
 
@@ -57,13 +60,16 @@ class CartController extends Controller
 
     }
     public function save(Request $request){
-
-        $identifier = rand().time();
+    
+        $identifier = $request->invoice;
         $invoice = $request->invoice;
         $cart = Cart::instance($invoice)->content();
         $created_at = date('Y-m-d H:i:s');
         Cart::instance($invoice)->store($identifier, $request->client,
         $request->invoice, $request->pro_forma, $created_at);
+        
+        
+        
 
         return redirect()->back();
     }
@@ -89,8 +95,13 @@ class CartController extends Controller
                         ->first();
 
         $client = Client::find($invoice_edit->client);
-        $cart = Cart::instance($invoice)->content();
 
+        $cart = Cart::content();
+
+        
+        
+
+        
         return view('invoice_edit')->with('invoice_edit', $invoice_edit)
                                     ->with('client', $client)
                                     ->with('cart', $cart);
